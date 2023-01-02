@@ -61,3 +61,8 @@ if (empleado.bruto < 12000) {
 // Calculo sueldo anual total restandole la retención que le corresponda según su situación:
 sueldoAnual = empleado.bruto - empleado.bruto*retencion;
 console.log("El sueldo anual del empleado es: " + sueldoAnual);
+
+// Calculo el salario neto mensual:
+sueldoMensual = sueldoAnual/empleado.pagas;
+// El método ".toFixed()" devuelve el número redondeado con los décimales que le pasemos por parámetro, en este caso 2:
+console.log(sueldoMensual.toFixed(2));
