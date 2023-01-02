@@ -44,6 +44,7 @@ const empleado = {
 // Declaro las variables:
 let retencion;
 let sueldoAnual;
+let sueldoMensual;
 
 // Con este "if" determino el porcentaje de retención de IRPF dependiendo del sueldo anual del trabajador:
 if (empleado.bruto < 12000) {
@@ -61,3 +62,8 @@ if (empleado.bruto < 12000) {
 // Calculo sueldo anual total restandole la retención que le corresponda según su situación:
 sueldoAnual = empleado.bruto - empleado.bruto*retencion;
 console.log("El sueldo anual del empleado es: " + sueldoAnual);
+
+// Calculo el salario neto mensual:
+sueldoMensual = sueldoAnual/empleado.pagas;
+// El método ".toFixed()" devuelve el número redondeado con los décimales que le pasemos por parámetro, en este caso 2:
+console.log(sueldoMensual.toFixed(2));
